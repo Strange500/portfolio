@@ -1,4 +1,4 @@
-#othelloProjectGallery   {
+#ProjectGallery   {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,7 +35,31 @@
     transition: .1s;
 
 }
+
+
 .galleryBtn:hover img{
     height: 3vh;
     transition: .1s;
+}
+
+
+.blurWall {
+    filter: blur(400000px);
+
+}
+
+#project1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 61vh;
+    width: 60vw;
+
+}
+
+#project1 .presentation {
+    margin: 0;
+    padding: 0;
+    text-align: left;
 }

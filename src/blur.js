@@ -1,0 +1,1 @@
+document.getElementById("background").style.filter = "blur(5px)";

@@ -4,16 +4,20 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/webstorm-icon-logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WS playground</title>
+    <title>Projet Othello</title>
     <link rel="stylesheet" href="public/style.css">
     <link rel="stylesheet" href="public/background.css">
     <link rel="stylesheet" href="public/project.css">
 
 </head>
 <body>
-<div class="wave"></div>
-<div class="wave"></div>
+
 <div id="loadingScreen"></div>
+<div id="background">
+    <div class="wave"></div>
+    <div class="wave"></div>
+</div>
+
 
 
 
@@ -21,8 +25,12 @@
 <main id="main">
     <div id="project1" class="project">
         <h1>Othello Agile</h1>
-        <p></p>
-        <div id="othelloProjectGallery" class="project-img">
+        <div class="presentation">
+            <h3>Présentation du jeu</h3>
+            <h4>Othello est un jeu de plateau consistant à retourner les pions de son adversaire pour les transformer en pions de sa couleur. Le jeu se termine lorsque le plateau est rempli ou qu'aucun des joueurs ne peut jouer. Le joueur ayant le plus de pions de sa couleur sur le plateau remporte la partie.</h4>
+
+        </div>
+        <div id="ProjectGallery" class="project-img">
             <span class="galleryLeftBtn galleryBtn"><img src="public/arrow.svg" class="filter-white flip-image"></span>
             <span class="galleryRightBtn galleryBtn"><img src="public/arrow.svg" class="filter-white"></span>
         </div>
@@ -39,5 +47,6 @@
 
 <script type="module" src="/src/main.js"></script>
 <script type="module" src="/src/gallery.js"></script>
+<script type="module" src="/src/blur.js"></script>
 </body>
 </html>

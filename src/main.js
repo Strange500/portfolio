@@ -1,7 +1,12 @@
 window.transitionToPage = function(href) {
-  document.getElementById("loadingScreen").style.opacity = 1
-  document.getElementById("loadingScreen").style.zIndex = 9999
-  document.getElementById("loadingScreen").style.left = 0
+  //document.getElementById("loadingScreen").style.opacity = 1
+  //document.getElementById("loadingScreen").style.zIndex = 9999
+  //document.getElementById("loadingScreen").style.left = 0
+
+  document.querySelector('body').style.filter = "blur(20px)";
+  sleep(100).then(() => {
+    document.getElementById('main').style.opacity = 0;
+  });
 
 
 
@@ -11,12 +16,19 @@ window.transitionToPage = function(href) {
 }
 
 document.addEventListener('DOMContentLoaded', function(event) {
-  document.getElementById("loadingScreen").style.opacity = 0
-  sleep(500).then(() => {
-    document.getElementById("loadingScreen").style.left = "100vw"
-    document.getElementById("loadingScreen").style.zIndex = -1
+  //document.getElementById("loadingScreen").style.opacity = 0
+  //sleep(500).then(() => {
+  //  document.getElementById("loadingScreen").style.left = "100vw"
+  //  document.getElementById("loadingScreen").style.zIndex = -1
 
+  //});
+  document.getElementById('main').style.opacity = 1;
+  sleep(500).then(() => {
+    document.querySelector('body').style.filter = "blur(0px)";
   });
+  //document.querySelector('body').style.filter = "blur(0px)";
+
+
 })
 
 function sleep(ms) {
