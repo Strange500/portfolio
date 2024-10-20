@@ -1,0 +1,126 @@
+@import "var.css";
+body {
+  background-color: var(--main-color);
+  color: var(--fourth-color);overflow-x: hidden;
+
+}
+#background {
+    background-color: var(--main-color);
+    width: 100vw;
+}
+
+.circle {
+    background-color: var(--second-color);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.smallCircle {
+    background-color: var(--third-color);
+    border-radius: 50%;
+    position: absolute;
+}
+
+@media (min-width: 1024px) {
+
+    .circle {
+        width: 200vw;
+        height: 200vw;
+    }
+
+    .smallCircle {
+        width: 15vw;
+        height: 15vw;
+    }
+
+}
+
+@media (max-width: 1024px) {
+
+    .circle {
+        width: 200vw;
+        height: 200vw;
+    }
+
+    .smallCircle {
+        width: 15vw;
+        height: 15vw;
+    }
+
+
+}
+
+#mainCircle {
+    top: -100vw;
+    left: -125vw;
+}
+
+#secondCircle {
+    top: 50vw;
+    left: 50vw;
+}
+
+#thirdCircle {
+    top: 250vw;
+    left: -20vw;
+}
+
+/* smazzll circle gravitating around main circle */
+
+@keyframes gravitate {
+    from {
+        transform: rotate(-20deg) translateX(100vw);
+    }
+    to {
+        transform: rotate(90deg) translateX(100vw);
+    }
+}
+@keyframes gravitate2 {
+    from {
+        transform: rotate(270deg) translateX(100vw);
+    }
+    to {
+        transform: rotate(90deg) translateX(100vw);
+    }
+}
+@keyframes gravitate3 {
+    from {
+        transform: rotate(-270deg) translateX(100vw);
+    }
+    to {
+        transform: rotate(0deg) translateX(100vw);
+    }
+}
+
+
+
+
+
+
+#smallCircleOne {
+    top: 2vw;
+    left: -22.5vw;
+    opacity: 1;
+    animation: gravitate 4s infinite linear;
+}
+
+#smallCircleTwo {
+    top: 140vw;
+    left: 120svw;
+    opacity: 1;
+    animation: gravitate2 3s infinite linear;
+}
+
+#smallCircleThree {
+    top: 330vw;
+    left: 60vw;
+    opacity: 1;
+    animation: gravitate3 2s infinite linear;
+}
+
+.blur {
+    filter: blur(30px);
+}
+
+
+
