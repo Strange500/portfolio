@@ -27,7 +27,7 @@ body {
     position: absolute;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 769px) {
 
     .circle {
         width: 200vw;
@@ -41,7 +41,7 @@ body {
 
 }
 
-@media (max-width: 1024px) {
+@media only screen and (max-width: 767px) {
 
     .circle {
         width: 200vw;
@@ -52,7 +52,6 @@ body {
         width: 15vw;
         height: 15vw;
     }
-
 
 }
 

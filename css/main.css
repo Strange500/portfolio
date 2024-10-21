@@ -6,9 +6,11 @@
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
 }
+
 body {
     height: 100vh;
 }
+
 main {
     height: 100%;
     z-index: 30;
@@ -16,35 +18,65 @@ main {
     grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
     grid-template-rows: .3fr repeat(4, 1fr);
     grid-column-gap: 0px;
-    grid-row-gap: 0px; 
+    grid-row-gap: 0px;
 }
 
 #topMenue {
     padding: 1vh;
-    grid-area: 1 / 1 / 2 / 6; 
-    background-color: rgb(0, 0, 0, .5);
+    grid-area: 1 / 1 / 2 / 6;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3), 0px 6px 20px rgba(0, 0, 0, 0.2);
-
 }
 
 #topMenue > ul {
     width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     list-style: none;
 }
+#topMenue > ul > li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 #topMenue > ul > li > a  {
     text-decoration: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-
+    font-size: 1.1vw;
 }
 
-.container{
+#topMenue > ul > li:hover > a  {
+    transition: 0.2s;
+    cursor: pointer;
+    background: linear-gradient(270deg, #ff0066, #ffcc00, #00ffcc, #6600ff);
+    background-size: 400%; /* Ensures the gradient is wide enough to animate */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 5s ease-in infinite;
+}
+#topMenue > ul > li:hover  {
+    transition: 0.2s;
+    cursor: pointer;
+    background: rgb(41, 41, 41, 0.5);
+}
+
+
+
+.container {
     color: white;
     border-radius: 1vw;
     display: flex;
@@ -52,32 +84,72 @@ main {
     justify-content: space-evenly;
     padding: 2vw;
 }
- 
 
 #pres {
-    grid-area: 3 / 2 / 3 /4;
+    grid-area: 3 / 2 / 3 / 4;
 }
 
-#pres h3  {
+#pres h3 {
     font-size: 50px; /* Adjust the size as needed */
     font-weight: bold;
     background: linear-gradient(270deg, #ff0066, #ffcc00, #00ffcc, #6600ff);
     background-size: 400%; /* Ensures the gradient is wide enough to animate */
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* Required for text to be transparent */
-    animation: gradient-animation 5s ease-in infinite ; 
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 5s ease-in infinite;
 }
 
 @keyframes gradient-animation {
     0% {
         background-position: 0% 50%; /* Start position of the gradient */
     }
-
     50% {
         background-position: 100% 50%; /* End position of the gradient */
     }
     100% {
         background-position: 0% 50%; /* Start position of the gradient */
+    }
+}
 
+/* Responsive Styles */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* Stack everything in a single column */
+        grid-template-rows: auto; /* Allow row heights to adjust */
+    }
+
+    #topMenue {
+        flex-direction: column; /* Stack menu items vertically */
+        padding: 2vh 0; /* Adjust padding */
+    }
+
+    #topMenue > ul {
+        flex-direction: column; /* Make the menu items stack */
+        align-items: center; /* Center align the items */
+    }
+
+    #pres h3 {
+        font-size: 30px; /* Smaller font size */
+    }
+
+    .container {
+        padding: 5vw; /* Increase padding for better spacing */
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+    #topMenue > ul {
+        justify-content: center; /* Center menu items on mobile */
+    }
+
+    #pres h3 {
+        font-size: 24px; /* Even smaller font size for mobile */
+    }
+
+    .container {
+        padding: 8vw; /* Further increase padding for mobile */
     }
 }
