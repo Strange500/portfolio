@@ -4,15 +4,21 @@ body {
   color: var(--fourth-color);overflow-x: hidden;
 
 }
-#background {
+#background_container {
     background-color: var(--main-color);
     width: 100vw;
+}
+
+#background_container > div {
+    z-index: -1;
+
 }
 
 .circle {
     background-color: var(--second-color);
     border-radius: 50%;
     position: absolute;
+    filter: blur(10px);
 }
 
 .smallCircle {
