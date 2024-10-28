@@ -15,7 +15,7 @@ main {
     z-index: 30;
     display: grid;
     grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
-    grid-template-rows: .3fr repeat(8, 1fr);
+    grid-template-rows: 7vh repeat(6, 35vh) repeat(2, 2fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
@@ -83,6 +83,22 @@ main {
     justify-content: space-evenly;
     padding: 2vw;
 }
+
+.blinker {
+    opacity: 1;
+    margin-bottom: -2px;
+    height: 15px;
+    margin-left: -5px;
+    border-left: 7px solid white;
+    animation: blinker 0.9s steps(2, start) infinite;
+}
+
+@keyframes blinker {
+    to {
+        visibility: hidden;
+    }
+}
+
 
 #pres {
     grid-area: 3 / 2 / 3 / 4;
@@ -157,7 +173,7 @@ main {
     grid-row-start: 5;
     grid-row-end: 7;
     grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column-end: 6;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -174,8 +190,27 @@ main {
     justify-content: space-evenly;
     width: 33vw;
     border-radius: 1vw;
-    background-color: rgba(41, 41, 41, 0.5);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3), 0px 6px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#techContainer  {
+    /*background-color: rgba(41, 41, 41, 0.5);*/
+    background: rgba(255, 255, 255, 0.05); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for enhancement */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+
+}
+
+#techContainer > div:nth-child(2) > h3 {
+    color: black;
+
+}
+
+#techContainer > div > h3 {
+    font-size: 2vw;
+    color: white;
 }
 
 #techContainer > div > ul {
@@ -191,10 +226,164 @@ main {
 
 #techContainer > div > ul > li {
     flex: 0 1 calc(33% - 20px);
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 #techContainer img {
     width: 100%;
     padding: 1vw;
     border-radius: 1vw;
+}
+
+#projectContainer {
+    z-index: 30;
+    grid-row-start: 7;
+    grid-row-end: 9;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2vw;
+    width: 100%;
+    height: 100%;
+}
+
+#projectContainer > div {
+    height: 100%;
+    width: 23vw;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
+}
+
+#projectContainer > div > section {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+#projectContainer > div > section {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#projectContainer > div:nth-child(1)> section {
+    background-image: url("../assets/homelabCard.webp");
+}
+
+#projectContainer > div:nth-child(2)> section {
+    background-image: url("../assets/homelabCard.webp");
+}
+
+#projectContainer > div:nth-child(3)> section {
+    background-image: url("../assets/homelabCard.webp");
+}
+
+#projectContainer > div:nth-child(4)> section {
+    background-image: url("../assets/homelabCard.webp");
+}
+
+#projectContainer > div > section > h2 {
+    font-size: 2vw;
+    text-align: center;
+    width: 100%;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1vw;
+}
+
+
+
+#projectContainer > div > div {
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+#projectContainer > div > div > span {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(41, 41, 41, 0.5);
+    color: white;
+    font-size: 1.5vw;
+    padding: 1vw;
+}
+
+#projectContainer > div > div > span:hover {
+    background: rgba(41, 41, 41, 0.8);
+}
+#projectContainer > div:hover > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1vw;
+    background: yellow;
+    height: 100%;
+    overflow: hidden;
+}
+
+.invisible {
+    display: none;
+}
+
+#projectContainer > div:hover section {
+    display: none;
+}
+#projectContainer > .card {
+    display: none;
+    width: 100%;
+    margin: 1vw;
+    padding: 1vw;
+    flex-direction: column;
+    background: rgb(255,255,255,0.9);
+    overflow: hidden; /* Hide overflow content */
+
+}
+#projectContainer > .card > p {
+    margin: 0; /* Remove margin to prevent overflow */
+    white-space: normal; /* Allow text to wrap normally */
+}
+
+#projectContainer > .selected {
+    display: flex;
+}
+
+#projectContainer > .card  > section > img {
+    max-width: 50%; /* S'assure que l'image ne dépasse pas sa conteneur */
+    height: auto; /* Garde les proportions de l'image */
+    border-radius: 8px; /* Ajoute un coin arrondi à l'image */
+}
+
+#projectContainer > .card > section  {
+    width: 100%;
+    margin: 20px 0; /* Ajoute une marge autour de l'image */
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+#projectContainer > .card > ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#projectContainer > .card > ul > li {
+    margin-bottom: 10px;
+}
+
+#projectContainer > .card > h1 {
+    color: #2c3e50;
+    text-align: center;
 }

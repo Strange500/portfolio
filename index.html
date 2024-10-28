@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/background.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/icons.css">
+    <link rel="stylesheet" href="css/border.css">
 </head>
 <body>
     <div id="background_container" >
@@ -45,8 +46,8 @@
 
         <nav id="topMenue">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#techContainer">Technologies</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -55,35 +56,31 @@
 
 
         <div class="container" id="pres">
-            <h1>Bonjour,</h1>
-            <h3>Je suis <div class="gradient">Benjamin Roget</div></h3>
-            <h5>étudiant en Informatique</h5>
+
         </div>
+
 
         <div id="techContainer">
             <div class="tech container">
                 <h3>Langages</h3>
                 <ul>
                     <li>
-                        <img src="https://upload.wikimedia.org/wikipedia/fr/2/2e/Java_Logo.svg" alt="Java">
+                        <img src="./assets/svg/Java_Logo.svg" alt="Java">
                     </li>
                     <li>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Python_logo_and_wordmark.svg" alt="Python">
+                        <img src="./assets/svg/python-svgrepo-com.svg" alt="Python">
                     </li>
                     <li>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="C">
+                        <img src="./assets/svg/C_Programming_Language.svg" alt="C">
                     </li>
                     <li>
-                        <img src="https://cdn.brandfetch.io/idjSeCeMle/theme/dark/logo.svg?k=bfHSJFAPEG" alt="PostGreeSql">
+                        <img src="./assets/svg/HTML5%20Logo.svg" alt="HTML">
                     </li>
                     <li>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML">
+                        <img src="./assets/svg/CSS3_logo_and_wordmark.svg" alt="CSS">
                     </li>
                     <li>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS">
-                    </li>
-                    <li>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JavaScript">
+                        <img src="./assets/svg/Unofficial_JavaScript_logo_2.svg" alt="JavaScript">
                     </li>
 
                 </ul>
@@ -92,25 +89,142 @@
                 <h3>Outils</h3>
                 <ul>
                     <li>
-                        <img src="https://cdn.brandfetch.io/id5_eOiB6T/theme/dark/logo.svg?k=bfHSJFAPEG" alt="Docker" >
+                        <img src="./assets/svg/docker-mark-blue.svg" alt="Docker" >
                     </li>
                     <li>
-                        <img src="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.svg" alt="Git">
+                        <img src="./assets/svg/git-svgrepo-com.svg" alt="Git">
                     </li>
                     <li>
-                        <img src="https://cdn.brandfetch.io/idJz03xsbD/theme/dark/logo.svg?k=bfHSJFAPEG" alt="Linux">
+                        <img src="./assets/svg/Arch_Linux__Crystal__icon.svg" alt="Linux">
                     </li>
                     <li>
-                        <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA.svg" alt="IntelliJ IDEA logo.">
+                        <img src="./assets/svg/IntelliJ_IDEA_Icon.svg" alt="IntelliJ IDEA logo.">
                     </li>
                     <li>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VsCode">
+                        <img src="./assets/svg/logo.svg" alt="PostGreeSql">
+                    </li>
+                    <li>
+                        <img src="./assets/svg/Visual_Studio_Code_1.35_icon.svg" alt="VsCode">
                     </li>
                 </ul>
             </div>
         </div>
 
+        <div id="projectContainer">
+
+            <div class="project">
+                <section >
+                    <h2>Homelab</h2>
+                </section>
+                <div>
+                    <h4>HomeLab</h4>
+                    <p>
+                    </p>
+                    <span onclick="selectProject('project1')">En savoir plus</span>
+                </div>
+            </div>
+
+            <div class="project">
+                <section >
+                    <h2>Homelab</h2>
+
+                </section>
+                <div>
+                    <p>vv</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <section >
+                    <h2>Homelab</h2>
+
+                </section>
+                <div>
+                    <p>vv</p>
+                </div>
+
+            </div>
+
+            <div class="project">
+                <section >
+                    <h2>Homelab</h2>
+
+                </section>
+                <div>
+                    <p>vv</p>
+                </div>
+
+            </div>
+
+            <section id="project1" class="card animBorder">
+                <h1>
+                    HomeLab
+                </h1>
+                <p>
+                    Dans le cadre d'un projet personnel, j'ai conçu et déployé un serveur Unraid puissant et sécurisé. Cette configuration utilise des technologies modernes pour optimiser l'accès aux services tout en garantissant la protection des données.
+                </p>
+                <section class="imgContainer">
+                    <img src="assets/svg/homelab.svg" alt="HomeLab">
+                </section>
+
+                <h2>Caractéristiques Principales :</h2>
+                <ul>
+                    <li>Gestion des Accès : Utilisation de Cloudflare en tant que proxy pour sécuriser les connexions Internet, avec un accès via Wireguard pour les outils d'administration.</li>
+                    <li>Containerisation avec Docker : Hébergement de diverses applications, incluant Jellyfin pour le streaming et Vaultwarden pour la gestion des mots de passe.</li>
+                    <li>Support de Base de Données : Intégration de PostgreSQL pour la gestion des données et de Redis pour le cache, améliorant ainsi la performance des applications.</li>
+                    <li>Sécurité Renforcée : Implémentation de CrowSec pour une protection proactive contre les menaces, et de Traefik pour la gestion flexible des requêtes.</li>
+                </ul>
+
+
+
+                <ul>
+                    <li>Github</li>
+                </ul>
+            </section>
+            <section id="project2" class="card">
+                <h2>
+                    HomeLab
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias amet aspernatur atque autem, consectetur consequatur corporis cumque debitis delectus doloremque doloribus ducimus ea eius eligendi eos error est eum ex explicabo facere fugiat fugit harum id illum impedit in incidunt ipsa ipsam ipsum iure laborum laudantium magnam magni maiores maxime minus molestiae mollitia natus nemo neque nihil nisi nobis non numquam obcaecati odit officiis omnis optio pariatur perferendis perspiciatis placeat praesentium provident quae quam quas qui quia quidem quisquam quo ratione recusandae rem repellat repudiandae rerum saepe sapiente sequi similique sit soluta sunt suscipit tempora tenetur totam ullam unde vel veniam veritatis voluptas voluptate voluptatem voluptatum. Adipisci alias amet aspernatur atque autem, consectetur consequatur corporis cumque debitis delectus doloremque doloribus ducimus ea eius eligendi eos error est eum ex explicabo facere fugiat fugit harum id illum impedit in incidunt ipsa ipsam ipsum iure laborum laudantium magnam magni maiores maxime minus molestiae mollitia natus nemo neque nihil nisi nobis non numquam obcaecati odit officiis omnis optio pariatur perferendis perspiciatis placeat praesentium provident quae quam quas qui quia quidem quisquam quo ratione recusandae rem repellat repudiandae rerum saepe sapiente sequi similique sit soluta sunt suscipit tempora tenetur totam ullam unde vel veniam veritatis voluptas voluptate voluptatem voluptatum.
+                </p>
+                <ul>
+                    <li>Github</li>
+                </ul>
+            </section>
+            <section id="project3" class="card">
+                <h2>
+                    HomeLab
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias amet aspernatur atque autem, consectetur consequatur corporis cumque debitis delectus doloremque doloribus ducimus ea eius eligendi eos error est eum ex explicabo facere fugiat fugit harum id illum impedit in incidunt ipsa ipsam ipsum iure laborum laudantium magnam magni maiores maxime minus molestiae mollitia natus nemo neque nihil nisi nobis non numquam obcaecati odit officiis omnis optio pariatur perferendis perspiciatis placeat praesentium provident quae quam quas qui quia quidem quisquam quo ratione recusandae rem repellat repudiandae rerum saepe sapiente sequi similique sit soluta sunt suscipit tempora tenetur totam ullam unde vel veniam veritatis voluptas voluptate voluptatem voluptatum. Adipisci alias amet aspernatur atque autem, consectetur consequatur corporis cumque debitis delectus doloremque doloribus ducimus ea eius eligendi eos error est eum ex explicabo facere fugiat fugit harum id illum impedit in incidunt ipsa ipsam ipsum iure laborum laudantium magnam magni maiores maxime minus molestiae mollitia natus nemo neque nihil nisi nobis non numquam obcaecati odit officiis omnis optio pariatur perferendis perspiciatis placeat praesentium provident quae quam quas qui quia quidem quisquam quo ratione recusandae rem repellat repudiandae rerum saepe sapiente sequi similique sit soluta sunt suscipit tempora tenetur totam ullam unde vel veniam veritatis voluptas voluptate voluptatem voluptatum.
+                </p>
+                <ul>
+                    <li>Github</li>
+                </ul>
+            </section>
+            <section id="project4" class="card">
+                <h2>
+                    HomeLab
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias amet aspernatur atque autem, consectetur consequatur corporis cumque debitis delectus doloremque doloribus ducimus ea eius eligendi eos error est eum ex explicabo facere fugiat fugit harum id illum impedit in incidunt ipsa ipsam ipsum iure laborum laudantium magnam magni maiores maxime minus molestiae mollitia natus nemo neque nihil nisi nobis non numquam obcaecati odit officiis omnis optio pariatur perferendis perspiciatis placeat praesentium provident quae quam quas qui quia quidem quisquam quo ratione recusandae rem repellat repudiandae rerum saepe sapiente sequi similique sit soluta sunt suscipit tempora tenetur totam ullam unde vel veniam veritatis voluptas voluptate voluptatem voluptatum. Adipisci alias amet aspernatur atque autem, consectetur consequatur corporis cumque debitis delectus doloremque doloribus ducimus ea eius eligendi eos error est eum ex explicabo facere fugiat fugit harum id illum impedit in incidunt ipsa ipsam ipsum iure laborum laudantium magnam magni maiores maxime minus molestiae mollitia natus nemo neque nihil nisi nobis non numquam obcaecati odit officiis omnis optio pariatur perferendis perspiciatis placeat praesentium provident quae quam quas qui quia quidem quisquam quo ratione recusandae rem repellat repudiandae rerum saepe sapiente sequi similique sit soluta sunt suscipit tempora tenetur totam ullam unde vel veniam veritatis voluptas voluptate voluptatem voluptatum.
+                </p>
+                <ul>
+                    <li>Github</li>
+                </ul>
+            </section>
+
+
+
+
+        </div>
+
     </main>
 
+
+    <script src="./index.js"></script>
+    <script src="./scripts/ProjectSelect.js"></script>
+    <script src="./scripts/typeAnim.js"></script>
 </body>
 </html>
