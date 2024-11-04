@@ -15,7 +15,7 @@ main {
     z-index: 30;
     display: grid;
     grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
-    grid-template-rows: 7vh repeat(6, 35vh) repeat(2, 2fr);
+    grid-template-rows: 7vh repeat(6, 35vh)  repeat(2, 2fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
@@ -102,6 +102,14 @@ main {
 
 #pres {
     grid-area: 3 / 2 / 3 / 4;
+}
+
+#texte {
+    grid-row-start: 4;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    justify-content: space-between;
 }
 
 #pres h3 {
@@ -329,7 +337,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     padding: 1vw;
-    background: yellow;
+    background: rgb(41,41,41, 0.5);
     height: 100%;
     overflow: hidden;
 
@@ -418,4 +426,32 @@ main {
         height: 10%; /* Start with height 0 */
         width: 23vw;
     }
+}
+
+
+
+.badge {
+    display: inline-block; /* Pour rendre le badge en ligne et ajuster la taille */
+    padding: 8px 12px; /* Espacement interne */
+    background-color: #007BFF; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border-radius: 12px; /* Coins arrondis */
+    font-size: 14px; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    text-transform: uppercase; /* Mettre le texte en majuscules */
+    position: relative; /* Nécessaire pour les éléments positionnés absolument */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Ombre */
+    transition: background-color 0.3s; /* Transition douce pour le changement de couleur */
+}
+
+.badge:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+}
+
+.project > div > h2 {
+    background: linear-gradient(270deg, #ff0066, #ffcc00, #00ffcc, #6600ff);
+    background-size: 400%; /* Ensures the gradient is wide enough to animate */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 5s ease-in infinite;
 }
