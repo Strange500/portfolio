@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/border.css">
 </head>
 <body>
+<div id="tooltip" class="tooltip" style="display: none;"></div>
+
     <div id="background_container" >
         <div id="mainCircle" class="circle"></div>
         <div id="secondCircle" class="circle"></div>
@@ -49,7 +51,7 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#techContainer">Technologies</a></li>
                 <li><a href="#projectContainer">projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#elementLimite">Contact</a></li>
             </ul>
         </nav>
 
@@ -104,13 +106,13 @@
                         <img src="./assets/svg/Arch_Linux__Crystal__icon.svg" alt="Linux">
                     </li>
                     <li>
-                        <img src="./assets/svg/IntelliJ_IDEA_Icon.svg" alt="IntelliJ IDEA logo.">
+                        <img src="./assets/svg/IntelliJ_IDEA_Icon.svg" alt="IntelliJ IDEA">
                     </li>
                     <li>
-                        <img src="./assets/svg/logo.svg" alt="PostGreeSql">
+                        <img src="./assets/svg/logo.svg" alt="PostgreSQL">
                     </li>
                     <li>
-                        <img src="./assets/svg/Visual_Studio_Code_1.35_icon.svg" alt="VsCode">
+                        <img src="./assets/svg/Visual_Studio_Code_1.35_icon.svg" alt="VSCode">
                     </li>
                 </ul>
             </div>
@@ -290,9 +292,11 @@
 
 
 
+
     <script src="./index.js"></script>
     <script src="./scripts/ProjectSelect.js"></script>
     <script src="./scripts/typeAnim.js"></script>
+    <script src="./scripts/mouse.js"></script>
     <script>
         window.onscroll = function() {
             const limite = document.getElementById('elementLimite').offsetTop - window.innerHeight;

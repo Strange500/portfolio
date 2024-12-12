@@ -455,3 +455,14 @@ main {
     -webkit-text-fill-color: transparent;
     animation: gradient-animation 5s ease-in infinite;
 }
+
+.tooltip {
+    z-index: 2000;
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    pointer-events: none; /* Prevent the tooltip from interfering with mouse events */
+    font-size: 14px;
+}
